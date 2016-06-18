@@ -9,17 +9,28 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
-    <form id="form1" runat="server">
+    <form id="form1" runat="server" >
     <div>
 
-        <asp:LinkButton Text="Home" runat ="server" Width="50px"/>
+        <asp:LinkButton Text="Home" runat ="server" Width="100px" BackColor="Black"
+             ForeColor ="White" Font-Underline="false" 
+           OnClientClick="home();return false" />
 
        
 
-        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server" >
         
         </asp:ContentPlaceHolder>
     </div>
     </form>
+
+    <script type="text/javascript">
+        function home() {
+            alert("caled");
+            window.location.href = '../consola.aspx';
+
+        }
+    </script>
+
 </body>
 </html>
