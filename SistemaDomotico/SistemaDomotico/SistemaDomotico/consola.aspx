@@ -1,9 +1,11 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SistemaDomotico.Master" AutoEventWireup="true" CodeBehind="consola.aspx.cs" Inherits="SistemaDomotico.Consolass" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <p>
-    </p>
+    <h2>
+        CONSOLAS
+    </h2>
     <asp:ListView ID="ListView1" runat="server" DataKeyNames="id" DataSourceID="Consolas" InsertItemPosition="LastItem">
         <AlternatingItemTemplate>
             <tr style="background-color:#FFF8DC;">
