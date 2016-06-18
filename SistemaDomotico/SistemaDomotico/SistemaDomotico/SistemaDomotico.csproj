@@ -175,8 +175,10 @@
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\domoticoStyle.css" />
     <Content Include="Content\Site.css" />
     <Content Include="demo.aspx" />
+    <Content Include="demoHttphandler.aspx" />
     <Content Include="Equipamento.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -382,6 +384,13 @@
     </Compile>
     <Compile Include="demo.aspx.designer.cs">
       <DependentUpon>demo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="demoHttphandler.aspx.cs">
+      <DependentUpon>demoHttphandler.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="demoHttphandler.aspx.designer.cs">
+      <DependentUpon>demoHttphandler.aspx</DependentUpon>
     </Compile>
     <Compile Include="Equipamento.aspx.cs">
       <DependentUpon>Equipamento.aspx</DependentUpon>
