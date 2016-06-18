@@ -1,16 +1,10 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Equipamento.aspx.cs" Inherits="SistemaDomotico.Equipamento" %>
-
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
-
-    <h2>Equipamento</h2>
-    <form id="form1" runat="server">
-        <div>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SistemaDomotico.Master" AutoEventWireup="true" CodeBehind="Equipamento.aspx.cs" Inherits="SistemaDomotico.Equipamento" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <h2>
+        Equipamentos
+    </h2>
             <asp:ListView ID="ListView1" runat="server" DataKeyNames="id" DataSourceID="equipamentoDS" InsertItemPosition="LastItem">
                 <AlternatingItemTemplate>
                     <tr style="background-color:#FFF8DC;">
@@ -187,6 +181,4 @@
             <asp:Parameter Name="id" Type="Int32" />
             </UpdateParameters>
         </asp:SqlDataSource>
-    </form>
-</body>
-</html>
+  </asp:Content>
