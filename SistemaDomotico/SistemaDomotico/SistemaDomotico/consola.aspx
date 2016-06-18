@@ -52,7 +52,16 @@
                 </td>
                 <td>
                     <asp:TextBox ID="nameTextBox" runat="server" Text='<%# Bind("name") %>' />
+                     <asp:RequiredFieldValidator runat ="server"
+                     ErrorMessage ="compo vazio"
+                     ControlToValidate ="nameTextBox"
+                     Display ="static"
+                     ForeColor ="Red"
+                         />
                 </td>
+                   
+                        
+
                <%-- <td>&nbsp;</td>--%>
             </tr>
         </InsertItemTemplate>
@@ -62,11 +71,15 @@
                     <asp:Button ID="DeleteButton" runat="server" CommandName="Delete" Text="Delete" />
                     <asp:Button ID="EditButton" runat="server" CommandName="Edit" Text="Edit" />
                 </td>
-                </td>
+              
                     <td>
                         <asp:LinkButton ID="nameLabel" runat="server" Text='<%# Eval("name") %>'
                             OnClientClick='<%#"showDetails(" +Eval("id") + " );return false" %>' />
                     </td>
+                   
+                    
+
+
                     <td hidden="hidden">
                         <asp:Label ID="idLabel" Visible="false" runat="server" Text='<%# Eval("id") %>' />
                     </td>
@@ -107,7 +120,12 @@
             </tr>
         </SelectedItemTemplate>
     </asp:ListView>
-    <asp:SqlDataSource ID="Consolas" runat="server" ConnectionString="<%$ ConnectionStrings:sistemaDomoticoConnectionString %>" DeleteCommand="DELETE FROM [Consola] WHERE [id] = @id" InsertCommand="INSERT INTO [Consola] ([name]) VALUES (@name)" SelectCommand="SELECT [name], [id] FROM [Consola] ORDER BY [name]" UpdateCommand="UPDATE [Consola] SET [name] = @name WHERE [id] = @id">
+    <asp:SqlDataSource ID="Consolas" runat="server"
+         ConnectionString="<%$ ConnectionStrings:sistemaDomoticoConnectionString %>" 
+        DeleteCommand="DELETE FROM [Consola] WHERE [id] = @id"
+        InsertCommand="INSERT INTO [Consola] ([name]) VALUES (@name)" 
+        SelectCommand="SELECT [name], [id] FROM [Consola] ORDER BY [name]"
+         UpdateCommand="UPDATE [Consola] SET [name] = @name WHERE [id] = @id">
         <DeleteParameters>
             <asp:Parameter Name="id" Type="Int32" />
         </DeleteParameters>
