@@ -10,16 +10,7 @@
 namespace SistemaDomotico {
     
     
-    public partial class sistemaMain {
-        
-        /// <summary>
-        /// form1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+    public partial class Consolass {
         
         /// <summary>
         /// ListView1 control.
@@ -31,12 +22,12 @@ namespace SistemaDomotico {
         protected global::System.Web.UI.WebControls.ListView ListView1;
         
         /// <summary>
-        /// sistemaDomotico2 control.
+        /// Consolas control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource sistemaDomotico2;
+        protected global::System.Web.UI.WebControls.SqlDataSource Consolas;
     }
 }
