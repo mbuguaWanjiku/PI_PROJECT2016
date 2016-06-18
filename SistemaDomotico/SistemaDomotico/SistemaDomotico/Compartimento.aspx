@@ -22,7 +22,7 @@
                              OnClientClick='<%#"showDetails(" +Eval("id") + " );return false" %>'
                             />
                     </td>
-                    <td>
+                    <td hidden="hidden">
                         <asp:Label ID="idLabel" runat="server" Text='<%# Eval("id") %>' />
                     </td>
                 </tr>
@@ -37,7 +37,7 @@
                         <asp:TextBox ID="nomeTextBox" runat="server" Text='<%# Bind("nome") %>' />
                     </td>
                        
-                    <td>
+                    <td hidden="hidden">
                         <asp:Label ID="idLabel1" runat="server" Text='<%# Eval("id") %>' />
                     </td>
                 </tr>
@@ -58,7 +58,7 @@
                     <td>
                         <asp:TextBox ID="nomeTextBox" runat="server" Text='<%# Bind("nome") %>' />
                     </td>
-                    <td>
+                    <td hidden="hidden">
                         <asp:TextBox ID="idTextBox" runat="server" Text='<%# Bind("id") %>' />
                     </td>
                      
@@ -78,7 +78,7 @@
                              OnClientClick='<%#"showDetails(" +Eval("id") + " );return false" %>'
                              />
                     </td>
-                    <td>
+                    <td hidden="hidden">
                         <asp:Label ID="idLabel" runat="server" Text='<%# Eval("id") %>' />
                     </td>
                 </tr>
@@ -93,7 +93,7 @@
                                  <tr runat="server" style="background-color:#FFFBD6; color: #333333;">
                                     <th runat="server"></th>
                                     <th runat="server">nome</th>
-                                    <th runat="server">id</th>
+                                    <%--<th runat="server">id</th>--%>
                                 </tr>
                                 <tr id="itemPlaceholder" runat="server">
                                 </tr>
@@ -114,7 +114,7 @@
                     <td>
                         <asp:Label ID="nomeLabel" runat="server" Text='<%# Eval("nome") %>' />
                     </td>
-                    <td>
+                    <td hidden="hidden">
                         <asp:Label ID="idLabel" runat="server" Text='<%# Eval("id") %>' />
                     </td>
                 </tr>
