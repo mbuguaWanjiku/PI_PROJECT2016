@@ -15,15 +15,15 @@ namespace SistemaDomotico
 
         }
 
-        public bool IsReusable
+        public new bool IsReusable
         {
             get
             {
                 return false;
             }
         }
-
-        public void ProcessRequest(HttpContext context)
+       
+        public override void  ProcessRequest(HttpContext context)
         {
             StringBuilder stringJson = new StringBuilder();
             stringJson.Append("HELLO WORLD");
