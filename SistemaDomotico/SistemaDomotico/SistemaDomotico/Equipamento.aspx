@@ -21,15 +21,15 @@
                         <td>
                             <asp:Label ID="nomeLabel" runat="server" Text='<%# Eval("nome") %>' />
                         </td>
-                        <td>
+                       <%-- <td>
                             <asp:Label ID="idLabel" runat="server" Text='<%# Eval("id") %>' />
-                        </td>
+                        </td>--%>
                         <td>
                             <asp:Label ID="estadoLabel" runat="server" Text='<%# Eval("estado") %>' />
                         </td>
-                        <td>
+                      <%--  <td>
                             <asp:Label ID="fk_compartimentoLabel" runat="server" Text='<%# Eval("fk_compartimento") %>' />
-                        </td>
+                        </td>--%>
                         <td>
                             <asp:Label ID="fk_tipoEquipamentoLabel" runat="server" Text='<%# Eval("fk_tipoEquipamento") %>' />
                         </td>
@@ -44,15 +44,15 @@
                         <td>
                             <asp:TextBox ID="nomeTextBox" runat="server" Text='<%# Bind("nome") %>' />
                         </td>
-                        <td>
-                            <asp:Label ID="idLabel1" runat="server" Text='<%# Eval("id") %>' />
+                        <td hidden="hidden">
+                            <asp:Label ID="idLabel1" runat="server" Text='<%# Eval("id") %>' Visible="false"/>
                         </td>
                         <td>
                             <asp:TextBox ID="estadoTextBox" runat="server" Text='<%# Bind("estado") %>' />
                         </td>
-                        <td>
+                       <%-- <td>
                             <asp:TextBox ID="fk_compartimentoTextBox" runat="server" Text='<%# Bind("fk_compartimento") %>' />
-                        </td>
+                        </td>--%>
                         <td>
                             <asp:TextBox ID="fk_tipoEquipamentoTextBox" runat="server" Text='<%# Bind("fk_tipoEquipamento") %>' />
                         </td>
@@ -74,13 +74,13 @@
                         <td>
                             <asp:TextBox ID="nomeTextBox" runat="server" Text='<%# Bind("nome") %>' />
                         </td>
-                        <td>&nbsp;</td>
+                       <%-- <td>&nbsp;</td>--%>
                         <td>
                             <asp:TextBox ID="estadoTextBox" runat="server" Text='<%# Bind("estado") %>' />
                         </td>
-                        <td>
+                       <%-- <td hidden="hidden">
                             <asp:TextBox ID="fk_compartimentoTextBox" runat="server" Text='<%# Bind("fk_compartimento") %>' />
-                        </td>
+                        </td>--%>
                          <td>
                         <asp:DropDownList runat="server" ID="tipoEquipamento" SelectedValue='<%#Bind("fk_tipoEquipamento")%>'>
 
@@ -102,15 +102,15 @@
                         <td>
                             <asp:Label ID="nomeLabel" runat="server" Text='<%# Eval("nome") %>' />
                         </td>
-                        <td>
+                        <%--<td>
                             <asp:Label ID="idLabel" runat="server" Text='<%# Eval("id") %>' />
-                        </td>
+                        </td>--%>
                         <td>
                             <asp:Label ID="estadoLabel" runat="server" Text='<%# Eval("estado") %>' />
                         </td>
-                        <td>
+                       <%-- <td>
                             <asp:Label ID="fk_compartimentoLabel" runat="server" Text='<%# Eval("fk_compartimento") %>' />
-                        </td>
+                        </td>--%>
                         <td>
                             <asp:Label ID="fk_tipoEquipamentoLabel" runat="server" Text='<%# Eval("fk_tipoEquipamento") %>' />
                         </td>
@@ -124,9 +124,9 @@
                                     <tr runat="server" style="background-color:#DCDCDC;color: #000000;">
                                         <th runat="server"></th>
                                         <th runat="server">nome</th>
-                                        <th runat="server">id</th>
+                                      <%--  <th runat="server">id</th>--%>
                                         <th runat="server">estado</th>
-                                        <th runat="server">fk_compartimento</th>
+                                    <%--    <th runat="server">fk_compartimento</th>--%>
                                         <th runat="server">fk_tipoEquipamento</th>
                                     </tr>
                                     <tr id="itemPlaceholder" runat="server">
@@ -148,15 +148,15 @@
                         <td>
                             <asp:Label ID="nomeLabel" runat="server" Text='<%# Eval("nome") %>' />
                         </td>
-                        <td>
+                       <%-- <td>
                             <asp:Label ID="idLabel" runat="server" Text='<%# Eval("id") %>' />
-                        </td>
+                        </td>--%>
                         <td>
                             <asp:Label ID="estadoLabel" runat="server" Text='<%# Eval("estado") %>' />
                         </td>
-                        <td>
+                       <%-- <td>
                             <asp:Label ID="fk_compartimentoLabel" runat="server" Text='<%# Eval("fk_compartimento") %>' />
-                        </td>
+                        </td>--%>
                         <td>
                             <asp:Label ID="fk_tipoEquipamentoLabel" runat="server" Text='<%# Eval("fk_tipoEquipamento") %>' />
                         </td>
@@ -183,8 +183,8 @@
                 <asp:Parameter Name="nome" Type="String" />
                 <asp:Parameter Name="estado" Type="Int32" />
                 <asp:Parameter Name="fk_compartimento" Type="Int32" />
-                <asp:Parameter Name="fk_tipoEquipamento" Type="Int32" />
-                <asp:Parameter Name="id" Type="Int32" />
+              <asp:Parameter Name="fk_tipoEquipamento" Type="Int32" />
+            <asp:Parameter Name="id" Type="Int32" />
             </UpdateParameters>
         </asp:SqlDataSource>
     </form>
