@@ -1,19 +1,11 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Compartimento.aspx.cs" Inherits="SistemaDomotico.Compartimento" %>
-
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
-    <h2>Compartimentos</h2>
-
-
-    <form id="form1" runat="server">
-    <div>
-    
-    </div>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SistemaDomotico.Master" AutoEventWireup="true"
+     CodeBehind="Compartimento.aspx.cs" Inherits="SistemaDomotico.Compartimento" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <h2>
+        Compartimento
+    </h2>
         <asp:ListView ID="ListView1" runat="server" DataKeyNames="id" DataSourceID="compDatasource" InsertItemPosition="LastItem">
             <AlternatingItemTemplate>
                 <tr style="background-color:#FAFAD2; color: #284775;">
@@ -145,10 +137,6 @@
                 <asp:Parameter Name="id" Type="Int32" />
             </UpdateParameters>
         </asp:SqlDataSource>
-    </form>
-
-
-
     
     <script type="text/javascript">
         function showDetails(id) {
@@ -156,5 +144,4 @@
        
         }
     </script>
-</body>
-</html>
+</asp:Content>
