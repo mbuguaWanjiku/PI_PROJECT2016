@@ -5,10 +5,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>MASTER PAGE</title>
+    
+    <link href="Content/domoticoStyle.css" rel="stylesheet" />
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
+    <div id="content" class ="divContent">
     <form id="form1" runat="server" >
     <div>
 
@@ -16,17 +19,17 @@
              ForeColor ="White" Font-Underline="false" 
            OnClientClick="home();return false" />
 
-       
-
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server" >
         
         </asp:ContentPlaceHolder>
     </div>
     </form>
+    </div>
+
+  
 
     <script type="text/javascript">
         function home() {
-            alert("caled");
             window.location.href = '../consola.aspx';
 
         }

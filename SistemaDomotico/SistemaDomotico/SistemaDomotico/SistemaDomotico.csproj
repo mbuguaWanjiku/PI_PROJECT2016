@@ -178,8 +178,9 @@
     <Content Include="Content\domoticoStyle.css" />
     <Content Include="Content\Site.css" />
     <Content Include="demo.aspx" />
-    <Content Include="demoHttphandler.aspx" />
+    <Content Include="EquipamentoHttphandler.aspx" />
     <Content Include="Equipamento.aspx" />
+    <Content Include="EquipamentoHttpHandler.js" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
@@ -385,12 +386,12 @@
     <Compile Include="demo.aspx.designer.cs">
       <DependentUpon>demo.aspx</DependentUpon>
     </Compile>
-    <Compile Include="demoHttphandler.aspx.cs">
-      <DependentUpon>demoHttphandler.aspx</DependentUpon>
+    <Compile Include="EquipamentoHttphandler.aspx.cs">
+      <DependentUpon>EquipamentoHttphandler.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="demoHttphandler.aspx.designer.cs">
-      <DependentUpon>demoHttphandler.aspx</DependentUpon>
+    <Compile Include="EquipamentoHttphandler.aspx.designer.cs">
+      <DependentUpon>EquipamentoHttphandler.aspx</DependentUpon>
     </Compile>
     <Compile Include="Equipamento.aspx.cs">
       <DependentUpon>Equipamento.aspx</DependentUpon>

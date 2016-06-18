@@ -6,10 +6,10 @@
     <div>
         <h1>Equipamentos</h1>
         <asp:button runat ="server"  Text ="Listagem"/>
-        <asp:button runat ="server"  Text ="´Montorizar" OnClientClick ="showMonitorizar(),return false"/>
+       <asp:button runat ="server"  Text ="´Montorizar" OnClientClick ="obterFicheiroJson() ;return false"/>
        
     </div>
-
+      <div id="content">
     <asp:ListView ID="ListView1" runat="server" DataKeyNames="id" DataSourceID="equipamentoDS" InsertItemPosition="LastItem">
         <AlternatingItemTemplate>
             <tr style="background-color: #FFF8DC;">
@@ -115,6 +115,7 @@
                 </td>
             </tr>
         </ItemTemplate>
+      
         <LayoutTemplate>
             <table runat="server">
                 <tr runat="server">
@@ -187,10 +188,6 @@
             </UpdateParameters>
         </asp:SqlDataSource>
 
-
-    <script>
-        function showMonitorizar() {
-
-        }
-    </script>
+    <script src="EquipamentoHttpHandler.js"></script>
+ 
 </asp:Content>

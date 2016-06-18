@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="demoHttphandler.aspx.cs" Inherits="SistemaDomotico.demoHttphandler" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="EquipamentoHttphandler.aspx.cs" Inherits="SistemaDomotico.demoHttphandler" %>
 
 <!DOCTYPE html>
 

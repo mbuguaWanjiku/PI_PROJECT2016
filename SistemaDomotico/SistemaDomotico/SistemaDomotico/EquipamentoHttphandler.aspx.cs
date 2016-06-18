@@ -26,7 +26,7 @@ namespace SistemaDomotico
         public override void  ProcessRequest(HttpContext context)
         {
             StringBuilder stringJson = new StringBuilder();
-            stringJson.Append("HELLO WORLD");
+            stringJson.Append("HELLO MONITORIZAR HTTPHANDLER");
             context.Response.Write("[" + stringJson.ToString() + "]");
 
 
