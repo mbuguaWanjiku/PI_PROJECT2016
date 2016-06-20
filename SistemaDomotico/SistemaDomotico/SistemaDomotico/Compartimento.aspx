@@ -74,8 +74,8 @@
                     </td>
                   <td>
                         <asp:LinkButton ID="nameLabel" runat="server" Text='<%# Eval("nome") %>' 
-                            
-                             OnClientClick='<%#"showDetails(" +Eval("id") + " );return false" %>'
+                                                 
+                             PostBackUrl ='<%#"~/Equipamento.aspx="+Eval("id")%>'
                              />
                     </td>
                     <td hidden="hidden">
@@ -138,10 +138,5 @@
             </UpdateParameters>
         </asp:SqlDataSource>
     
-    <script type="text/javascript">
-        function showDetails(id) {
-            window.location.href = '../Equipamento.aspx?id='+id;
-       
-        }
-    </script>
+  
 </asp:Content>
