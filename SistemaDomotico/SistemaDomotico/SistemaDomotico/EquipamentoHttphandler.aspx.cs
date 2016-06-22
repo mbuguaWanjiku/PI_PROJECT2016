@@ -1,5 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data;
+using System.Data.Common;
 using System.Linq;
 using System.Text;
 using System.Web;
@@ -8,27 +11,76 @@ using System.Web.UI.WebControls;
 
 namespace SistemaDomotico
 {
-    public partial class demoHttphandler : System.Web.UI.Page,IHttpHandler
+    public partial class EquipamentoHttphandler : System.Web.UI.Page, IHttpHandler
     {
-        protected void Page_Load(object sender, EventArgs e)
+
+        public new void ProcessRequest(HttpContext context)
         {
+            //  context.Response.Write("bingo");
+            selectData(context);
 
         }
+
+       
+
+        private void AccessDatabase(string selectCommand, out DbConnection dbConnection,
+                                       out DbDataReader dbDataReader)
+        {
+
+            dbConnection = DbProviderFactories.GetFactory(ConfigurationManager.ConnectionStrings["principal"].ProviderName).CreateConnection();
+            dbConnection.ConnectionString = ConfigurationManager.ConnectionStrings["principal"].ConnectionString;
+            dbConnection.Open();
+            DbCommand dbCommand = dbConnection.CreateCommand();
+            dbCommand.CommandType = CommandType.Text;
+            dbCommand.CommandText = selectCommand;
+            dbDataReader = dbCommand.ExecuteReader(CommandBehavior.CloseConnection);
+        }
+
+          private void selectData(HttpContext context)
+        {
+            DbConnection dbConnection;
+            DbDataReader dbDataReader;
+            string sqlCommand ="";
+            AccessDatabase(sqlCommand,out dbConnection,out dbDataReader);
+            StringBuilder resultado = new StringBuilder();
+            while (dbDataReader.Read())
+            {
+                if (resultado.Length != 0)
+                {
+                    resultado.Append(",");
+                }
+                resultado.AppendFormat("\"{0}\":{1}", dbDataReader.GetString(0), dbDataReader.GetInt32(1));
+            }
+            dbDataReader.Close();
+            dbConnection.Dispose();
+            context.Response.ContentType = "application/json; charset=utf-8";
+            if (resultado.Length != 0)
+            {
+                context.Response.Write("{" + resultado.ToString() + "}");
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         public new bool IsReusable
         {
             get
             {
                 return false;
+                ;
             }
-        }
-       
-        public override void  ProcessRequest(HttpContext context)
-        {
-            StringBuilder stringJson = new StringBuilder();
-            stringJson.Append("HELLO MONITORIZAR HTTPHANDLER");
-            context.Response.Write("[" + stringJson.ToString() + "]");
-
 
         }
     }

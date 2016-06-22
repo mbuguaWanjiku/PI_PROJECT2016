@@ -9,7 +9,6 @@
        <asp:button runat ="server"  Text ="´Montorizar" OnClientClick ="obterFicheiroJson() ;return false"/>
        
     </div>
-      <div id="content">
     <asp:ListView ID="ListView1" runat="server" DataKeyNames="id" DataSourceID="equipamentoDS" InsertItemPosition="LastItem">
         <AlternatingItemTemplate>
             <tr style="background-color: #FFF8DC;">
@@ -164,7 +163,12 @@
         </SelectedItemTemplate>
     </asp:ListView>
     </div>
-        <asp:SqlDataSource ID="equipamentoDS" runat="server" ConnectionString="<%$ ConnectionStrings:sistemaDomoticoConnectionString %>" DeleteCommand="DELETE FROM [Equipamento] WHERE [id] = @id" InsertCommand="INSERT INTO [Equipamento] ([nome], [estado], [fk_compartimento], [fk_tipoEquipamento]) VALUES (@nome, @estado, @fk_compartimento, @fk_tipoEquipamento)" SelectCommand="SELECT * FROM [Equipamento] WHERE ([fk_compartimento] = @fk_compartimento) ORDER BY [nome]" UpdateCommand="UPDATE [Equipamento] SET [nome] = @nome, [estado] = @estado, [fk_compartimento] = @fk_compartimento, [fk_tipoEquipamento] = @fk_tipoEquipamento WHERE [id] = @id">
+        <asp:SqlDataSource ID="equipamentoDS" runat="server"
+             ConnectionString="<%$ ConnectionStrings:sistemaDomoticoConnectionString %>"
+             DeleteCommand="DELETE FROM [Equipamento] WHERE [id] = @id"
+             InsertCommand="INSERT INTO [Equipamento] ([nome], [estado], [fk_compartimento], [fk_tipoEquipamento]) VALUES (@nome, @estado, @fk_compartimento, @fk_tipoEquipamento)" 
+            SelectCommand="SELECT * FROM [Equipamento] WHERE ([fk_compartimento] = @fk_compartimento) ORDER BY [nome]"
+             UpdateCommand="UPDATE [Equipamento] SET [nome] = @nome, [estado] = @estado, [fk_compartimento] = @fk_compartimento, [fk_tipoEquipamento] = @fk_tipoEquipamento WHERE [id] = @id">
             <DeleteParameters>
                 <asp:Parameter Name="id" Type="Int32" />
             </DeleteParameters>

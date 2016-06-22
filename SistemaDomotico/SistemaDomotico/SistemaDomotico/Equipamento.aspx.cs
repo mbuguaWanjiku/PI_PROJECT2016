@@ -17,9 +17,8 @@ namespace SistemaDomotico
 
         protected void ListView1_ItemInserting(object sender, ListViewInsertEventArgs e)
         {
-            //string sv = ((DropDownList)e.Item.FindControl("tipoEquipamento")).SelectedValue;
-           
-            //equipamentoDS.InsertParameters.Add("fk_compartimento", "1");
+            //DropDownList dropDown = ((DropDownList)e.Item.FindControl("tipoEquipamento"));
+            //dropDown.Items.Add(new ListItem("Add New", "0"));
 
         }
         
